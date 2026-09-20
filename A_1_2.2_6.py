@@ -2,8 +2,7 @@ import sympy as sp
 import utils
 p = sp.Symbol('p')
 
-
-
+# Defining the functions for each equation
 pa = lambda p: p * (1 + ((7 - p**5) / (p**2)))**3
 pb = lambda p: p - ((p**5 - 7) / (p**2))
 pc = lambda p: p - ((p**5 - 7) / (5 * p**4))

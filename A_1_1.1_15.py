@@ -1,4 +1,5 @@
 import sympy as sp
+
 # Seting up the mathematical variable and the function
 x = sp.Symbol('x')
 f = x*sp.exp(x**2)

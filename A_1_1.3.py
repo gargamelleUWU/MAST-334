@@ -2,12 +2,18 @@ import sympy as sp
 
 # setting up the mathematical variable
 n = sp.Symbol('n')
+
+# Defining the sequence
 sequence = (sp.ln(n+1)-sp.ln(n))
+
+# Evaluating the limit of the sequence as n approaches infinity
 squence_limit = sp.limit(sequence, n, sp.oo)
 print(f"Limit of the sequence as n approaches infinity = {squence_limit}")
 
+# Finding the Absolute Error between the sequence and its limit
 error = abs(squence_limit - sequence)
 
+# Finding the rate of convergence of the sequence
 for p in range(1,6):
     beta_n = 1 / n**p
     ratio_limit = sp.limit(error / beta_n, n, sp.oo)

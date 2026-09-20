@@ -10,7 +10,7 @@ for i in range(-5, 6):
     a = i
     b = i + 1
 
-    # evaluating f(i) and f(i+1) to check for sign change
+    # evaluating f(i) and f(i+1) to check for sign change.
     f_a = f.subs(x, a).evalf()
     f_b = f.subs(x, b).evalf()
 

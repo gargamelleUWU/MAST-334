@@ -25,6 +25,7 @@ three_digit_approximation = f_approx.subs(x, 0.1).evalf(3) # Unsure if I should 
 print("Part C")
 print(f"P3(0.1) rounded to 3 decimal places = {three_digit_approximation}")
 
+
 # Part d: Find the relative error between f(0.1) and the results of part (b) and part (c)
 accurate_value = f.subs(x, 0.1).evalf()
 relative_error_b = abs((accurate_value - three_digit_evaluation) / accurate_value)

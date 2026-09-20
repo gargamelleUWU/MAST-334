@@ -1,5 +1,6 @@
 import sympy as sp
 
+# Bisection function to find the root of a function within a given interval [a, b] with a specified tolerance TOL.
 def bisect(f, symbol, a, b, TOL):
     f_num = sp.lambdify(symbol, f)
 
@@ -25,6 +26,7 @@ def bisect(f, symbol, a, b, TOL):
             
     print(f"The root is approximately at x = {c:.5f})")
 
+# Convergence iteration function to evaluate the convergence rate.
 def convergence_iteration(func, initial_guess, iterations, target, tolerance):
     current_value = initial_guess
     for i in range(iterations):
