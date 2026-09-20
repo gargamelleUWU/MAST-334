@@ -47,3 +47,19 @@ def convergence_iteration(func, initial_guess, iterations, target, tolerance):
 
     print(f"Did not converge within {iterations} iterations. Last value: {current_value}")
     return None
+
+# Fixed Point Iteration function
+def fix_point_iteration(func, interval, tol):
+    a, b = interval
+    x0 = (a + b) / 2
+
+    x1 = func(x0)
+    iteration = 1
+
+    while abs(x1 - x0) >= tol:
+        x0 = x1
+        x1 = func(x0)
+        iteration += 1
+
+    print(f"Fixed point was found at value {x1:.5f} within {iteration} iterations")
+    return x1, iteration
